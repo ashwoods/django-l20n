@@ -1,0 +1,97 @@
+{
+    "type": "LOL",
+    "body": [
+        {
+            "type": "Entity",
+            "id": {
+                "type": "Identifier",
+                "name": "foo"
+            },
+            "value": {
+                "type": "String",
+                "content": {
+                    "type": "String",
+                    "content": "Foo"
+                }
+            },
+            "index": [],
+            "attrs": [],
+            "local": false
+        },
+        {
+            "type": "Entity",
+            "id": {
+                "type": "Identifier",
+                "name": "bar"
+            },
+            "value": {
+                "type": "String",
+                "content": {
+                    "type": "ComplexString",
+                    "content": [
+                        {
+                            "type": "Identifier",
+                            "name": "foo"
+                        },
+                        {
+                            "type": "String",
+                            "content": " Bar "
+                        },
+                        {
+                            "type": "Identifier",
+                            "name": "foo"
+                        }
+                    ]
+                }
+            },
+            "index": [],
+            "attrs": [],
+            "local": false
+        },
+        {
+            "type": "Macro",
+            "id": {
+                "type": "Identifier",
+                "name": "plurals"
+            },
+            "args": [
+                {
+                    "type": "VariableExpression",
+                    "id": {
+                        "type": "Identifier",
+                        "name": "n"
+                    }
+                }
+            ],
+            "expression": {
+                "type": "ConditionalExpression",
+                "test": {
+                    "type": "BinaryExpression",
+                    "operator": {
+                        "type": "BinaryOperator",
+                        "token": "=="
+                    },
+                    "left": {
+                        "type": "VariableExpression",
+                        "id": {
+                            "type": "Identifier",
+                            "name": "n"
+                        }
+                    },
+                    "right": {
+                        "type": "Number",
+                        "value": 1
+                    }
+                },
+                "consequent": {
+                    "type": "String",
+                    "content": "one"
+                },
+                "alternate": {
+                    "type": "String",
+                    "content": "many"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+<foo "Foo">
+<bar "{{ foo }} Bar {{ foo }}">
+
+<plurals($n) { $n == 1 ? "one" : "many" }>
